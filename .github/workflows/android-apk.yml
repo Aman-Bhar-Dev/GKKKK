@@ -27,11 +27,11 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: latest
-          accept-licenses: true
-          packages: |
-            platform-tools
-            platforms;android-34
-            build-tools;34.0.0
+          accept-android-sdk-licenses: true
+          packages: platform-tools, platforms;android-33, build-tools;33.0.2
+
+      - name: Accept Android SDK licenses explicitly
+        run: yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses || true
 
       - name: Disable Capacitor telemetry
         run: npx --yes @capacitor/cli@latest cap telemetry off || true
