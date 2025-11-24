@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ghar ka Khaana - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#F4A261", // Saffron/Turmeric Orange
+              "secondary": "#84A98C", // Sage Green
+              "background-light": "#FEF9F3", // Soft Cream
+              "background-dark": "#2a2a2a", // A complementary dark mode background
+              "text-primary-light": "#333333", // Charcoal Grey
+              "text-primary-dark": "#FEF9F3",
+              "text-secondary-light": "#897561",
+              "text-secondary-dark": "#b0b0b0",
+              "border-light": "#e6e0db",
+              "border-dark": "#555555"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden p-4">
+<div class="flex w-full max-w-md flex-col items-center gap-6">
+<!-- Logo -->
+<div class="flex flex-col items-center gap-2 pb-4">
+<div class="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">
+                        lunch_dining
+                    </span>
+</div>
+<h2 class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark tracking-tight">Ghar ka Khaana</h2>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-text-primary-light dark:text-text-primary-dark tracking-light text-[32px] font-bold leading-tight text-center pb-3">Welcome Back!</h1>
+<!-- Email/Phone TextField -->
+<div class="flex w-full flex-col gap-4">
+<label class="flex w-full flex-col">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal pb-2">Email or Phone Number</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary dark:text-secondary">mail</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary-light dark:text-text-primary-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-white dark:bg-background-dark h-14 placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark pl-12 pr-4 py-[15px] text-base font-normal leading-normal" placeholder="Enter your email or phone number" value=""/>
+</div>
+</label>
+<!-- Password TextField -->
+<label class="flex w-full flex-col">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal pb-2">Password</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary dark:text-secondary">lock</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary-light dark:text-text-primary-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-white dark:bg-background-dark h-14 placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark pl-12 pr-12 py-[15px] text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<button class="absolute right-4 text-secondary dark:text-secondary">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+</div>
+<!-- MetaText: Forgot Password? -->
+<div class="w-full text-right">
+<p class="text-primary text-sm font-medium leading-normal underline cursor-pointer">Forgot Password?</p>
+</div>
+<!-- SingleButton: Log In -->
+<div class="flex w-full pt-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md shadow-primary/30 hover:bg-opacity-90 transition-opacity">
+<span class="truncate">Log In</span>
+</button>
+</div>
+<!-- Divider with Text -->
+<div class="flex w-full items-center gap-4 py-4">
+<hr class="flex-grow border-t border-border-light dark:border-border-dark"/>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Or log in with</p>
+<hr class="flex-grow border-t border-border-light dark:border-border-dark"/>
+</div>
+<!-- Social Login Buttons -->
+<div class="flex w-full gap-4">
+<button class="flex h-14 flex-1 items-center justify-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark font-medium transition-colors hover:bg-gray-50 dark:hover:bg-zinc-800">
+<img alt="Google logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXsWQx5JjSbRMBZMPY3vgIwvAYj8BFmXUDcqdINligmKbzq0IdBeSdsEw8kKwFTn1OWPw9W-oTam468s55Ki-KyC5uZ3H3slgk7Zc7sJ0iy9UmQseP8FWq0C4U-uC75RfEyScOEZW05llflpI4dcrYczxh3UjlVyL-4dkzjCgYQnNTOsFAuFjfDJnZhBgM7_zVRMyc_xjh1bF1GhAGFU4jhQGhxxZqnzSz4K72L-xTJrNP-6bmnBWrb5QuLALRpcfwraj16Q0mJM5y"/>
+<span>Google</span>
+</button>
+<button class="flex h-14 flex-1 items-center justify-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark font-medium transition-colors hover:bg-gray-50 dark:hover:bg-zinc-800">
+<img alt="Facebook logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFYpjttf7kGj0NfdquzKEh8km91SatHsLEYeEGLC_ca9UDgoPMZQdDF2Hc079Z5Bk20w1j-0_kkZuDiplTHWIQNObC2jUSWszXb6luKRBj99vjnqyFp-wQPsZ_d4nbtX9xh6fRzDBZjHZi9rcTx27oYQxjAA5I-gBHDoRlCyGU3Ec6po3YOpM5QTyt8hPBRGi8U4LqeTafRhNCoNKP4J222yHe9s5W3fZQ1oBofvY9w-Y5LYkGtdeJnAtXMniqluBgmxH4Ob6Xe1-f"/>
+<span>Facebook</span>
+</button>
+</div>
+<!-- Sign Up Link -->
+<div class="pt-6 text-center">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base">New user? <a class="font-bold text-primary underline" href="#">Sign Up</a></p>
+</div>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const findByText = (selector, text) => Array.from(document.querySelectorAll(selector)).find(el => (el.textContent || '').trim().includes(text));
+
+    const loginBtn = findByText('button', 'Log In');
+    if (loginBtn) {
+      loginBtn.addEventListener('click', () => {
+        window.location.href = '../profile_setup/code.html';
+      });
+    }
+
+    const backBtn = Array.from(document.querySelectorAll('button, .material-symbols-outlined')).find(el => (el.textContent || '').includes('arrow_back'));
+    if (backBtn && backBtn.addEventListener) {
+      backBtn.addEventListener('click', () => {
+        window.location.href = '../welcome_to_ghar_ka_khaana/code.html';
+      });
+    }
+  });
+</script>
+</body></html>

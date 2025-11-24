@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirm &amp; Pay - Ghar ka Khaana</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec7f13",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221910",
+              "surface-light": "#ffffff",
+              "surface-dark": "#2a221a",
+              "text-light-primary": "#181411",
+              "text-dark-primary": "#f8f7f6",
+              "text-light-secondary": "#897561",
+              "text-dark-secondary": "#a1907e",
+              "border-light": "#e6e0db",
+              "border-dark": "#4d4235",
+              "accent": "#556B2F"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "1rem",
+              "lg": "1.5rem",
+              "xl": "2rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex w-full items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-3 backdrop-blur-sm">
+<button class="text-text-light-primary dark:text-text-dark-primary flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Confirm &amp; Pay</h1>
+</div>
+<main class="flex-1 px-4 pb-32">
+<!-- Order Summary Card -->
+<section class="mt-4">
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-5 shadow-sm">
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Order Summary</h2>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between gap-x-6">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">20-Day Lunch Plan</p>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal text-right">₹2400.00</p>
+</div>
+<div class="flex justify-between gap-x-6">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Delivery Fee</p>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal text-right">₹100.00</p>
+</div>
+<div class="flex justify-between gap-x-6">
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">GST (5%)</p>
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal text-right">₹125.00</p>
+</div>
+<div class="my-3 h-px w-full bg-border-light dark:bg-border-dark"></div>
+<div class="flex justify-between gap-x-6 items-center">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-bold leading-normal">Total Amount</p>
+<p class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-normal text-right">₹2625.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Method Selector -->
+<section class="mt-8">
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Select Payment Method</h2>
+<div class="flex flex-col gap-3" style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%23ec7f13%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%274%27/%3e%3c/svg%3e');">
+<label class="flex items-center gap-4 rounded-lg border-2 border-solid border-primary/50 dark:border-primary/70 bg-primary/10 dark:bg-primary/20 p-4 transition-all">
+<div class="flex grow flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">GPay UPI</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">user@oksbi</p>
+</div>
+<input checked="" class="h-5 w-5 appearance-none rounded-full border-2 border-text-light-secondary dark:border-text-dark-secondary bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-light dark:focus:ring-offset-surface-dark" name="payment_method" type="radio"/>
+</label>
+<label class="flex items-center gap-4 rounded-lg border-2 border-solid border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 transition-all">
+<div class="flex grow flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Visa Debit Card</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">**** **** **** 1234</p>
+</div>
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-text-light-secondary dark:border-text-dark-secondary bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface-light dark:focus:ring-offset-surface-dark" name="payment_method" type="radio"/>
+</label>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-dashed border-border-light dark:border-border-dark p-4 text-center text-primary dark:text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="text-sm font-semibold">Add New Payment Method</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Sticky Footer CTA -->
+<footer class="fixed bottom-0 left-0 right-0 z-10 w-full bg-surface-light/80 dark:bg-surface-dark/80 p-4 backdrop-blur-sm">
+<div class="flex items-center justify-center gap-2 text-xs text-text-light-secondary dark:text-text-dark-secondary mb-3">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>Your payment is safe and encrypted.</span>
+</div>
+<button class="flex h-14 w-full items-center justify-center rounded-full bg-primary px-6 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                Pay ₹2625.00 Securely
+            </button>
+</footer>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const findByText = (selector, text) => Array.from(document.querySelectorAll(selector)).find(el => (el.textContent || '').trim().includes(text));
+    const payBtn = findByText('button', 'Pay');
+    const fallbackPayBtn = findByText('button', 'Pay ₹');
+    const footerPayBtn = document.querySelector('footer button');
+    const targetBtn = footerPayBtn || payBtn || fallbackPayBtn;
+
+    // Dynamically populate order summary from localStorage
+    try {
+      const selectedDays = parseInt(localStorage.getItem('selectedDays') || '5', 10);
+      const planName = localStorage.getItem('planName') || 'Weekly Veg Thali';
+      const planAmount = parseFloat(localStorage.getItem('computedPlanAmount') || '2400');
+      const deliveryFee = 100;
+      const gst = Math.round(planAmount * 0.05);
+      const total = planAmount + deliveryFee + gst;
+
+      const summaryRows = document.querySelectorAll('section div.flex.flex-col.gap-3 > div.flex.justify-between');
+      // First row: plan title and amount
+      if (summaryRows[0]) {
+        const titleEl = summaryRows[0].querySelector('p');
+        const amountEl = summaryRows[0].querySelectorAll('p')[1];
+        if (titleEl) titleEl.textContent = `${selectedDays}-Day ${planName} Plan`;
+        if (amountEl) amountEl.textContent = `₹${planAmount.toFixed(2)}`;
+      }
+      // GST row update
+      const gstRow = Array.from(summaryRows).find(row => (row.textContent || '').includes('GST'));
+      if (gstRow) {
+        const gstAmountEl = gstRow.querySelectorAll('p')[1];
+        if (gstAmountEl) gstAmountEl.textContent = `₹${gst.toFixed(2)}`;
+      }
+      // Total row update
+      const totalRow = document.querySelector('section div.flex.flex-col.gap-3 div.flex.justify-between.items-center');
+      if (totalRow) {
+        const totalAmountEl = totalRow.querySelectorAll('p')[1];
+        if (totalAmountEl) totalAmountEl.textContent = `₹${total.toFixed(2)}`;
+      }
+      // Update Pay button label
+      if (targetBtn) {
+        targetBtn.innerHTML = `Pay ₹${total.toFixed(2)} Securely`;
+      }
+      // Ensure only one visible Pay CTA
+      try {
+        const payButtons = Array.from(document.querySelectorAll('button')).filter(b => ((b.textContent || '').includes('Pay')));
+        const footerBtn = document.querySelector('footer button');
+        payButtons.forEach(b => { if (footerBtn && b !== footerBtn) b.style.display = 'none'; });
+      } catch {}
+    } catch {}
+
+    if (targetBtn) {
+      targetBtn.addEventListener('click', () => {
+        // Create a dummy success order payload and persist
+        try {
+          const selectedDays = parseInt(localStorage.getItem('selectedDays') || '5', 10);
+          const planName = localStorage.getItem('planName') || 'Weekly Veg Thali';
+          const planAmount = parseFloat(localStorage.getItem('computedPlanAmount') || '2400');
+          const deliveryFee = 100;
+          const gst = Math.round(planAmount * 0.05);
+          const total = planAmount + deliveryFee + gst;
+
+          const now = new Date();
+          const startDate = new Date(now);
+          const endDate = new Date(now);
+          endDate.setDate(endDate.getDate() + Math.max(selectedDays - 1, 0));
+          const fmt = (d) => d.toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' });
+
+          const orderId = 'ORD-' + now.getFullYear() + (now.getMonth()+1).toString().padStart(2,'0') + now.getDate().toString().padStart(2,'0') + '-' + now.getHours().toString().padStart(2,'0') + now.getMinutes().toString().padStart(2,'0');
+          const order = {
+            orderId,
+            status: 'Confirmed',
+            orderDateText: fmt(now),
+            planName,
+            selectedDays,
+            amount: total,
+            planAmount,
+            gst,
+            deliveryFee,
+            period: `${fmt(startDate)} – ${fmt(endDate)}`
+          };
+          localStorage.setItem('lastOrder', JSON.stringify(order));
+          const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+          orders.unshift(order);
+          localStorage.setItem('orders', JSON.stringify(orders));
+          localStorage.setItem('justPaid', '1');
+        } catch {}
+
+        window.location.href = '../checkout_success/code.html';
+      });
+    }
+
+    const backIcon = Array.from(document.querySelectorAll('.material-symbols-outlined')).find(el => (el.textContent || '').includes('arrow_back'));
+    if (backIcon) {
+      backIcon.addEventListener('click', () => {
+        window.location.href = '../plan_details_&_menu_preview/code.html';
+      });
+    }
+  });
+</script>
+</body></html>

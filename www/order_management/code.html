@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Orders - Ghar ka Khaana</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec7f13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "saffron": "#FF9F1C",
+                        "turmeric": "#FFBF00",
+                        "mint": "#2EC4B6",
+                        "off-white": "#FFF8F0",
+                        "soft-gray": "#A9A9A9",
+                        "charcoal": "#333333"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-off-white dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-off-white/80 dark:bg-background-dark/80 p-4 pb-2 justify-between backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-charcoal dark:text-off-white">arrow_back</span>
+</div>
+<h1 class="text-charcoal dark:text-off-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Orders</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-charcoal dark:text-off-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">support_agent</span>
+</button>
+</div>
+</header>
+<!-- Tabs -->
+<nav class="pb-3 px-4 bg-off-white dark:bg-background-dark">
+<div class="flex border-b border-soft-gray/30 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-saffron text-charcoal dark:text-off-white pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Active</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-soft-gray dark:text-soft-gray pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Past Orders</p>
+</a>
+</div>
+</nav>
+<main class="flex-1 p-4 space-y-4">
+<!-- Active Order Card 1: Out for Delivery -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-lg bg-white dark:bg-gray-800 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-charcoal dark:text-off-white text-lg font-bold leading-tight tracking-[-0.015em]">Weekly Veg Lunch Plan</p>
+<p class="text-soft-gray text-sm font-normal leading-normal">Order Date: 24 Oct 2023</p>
+</div>
+<img class="size-16 rounded-md object-cover" data-alt="A delicious looking pizza on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1BF6YkuODSotrOYKdId686eNb2slM_tp3IZuCkdKazNo4P1ZeDBQ5C0JXp-8bjVCbrpbbTbw9NlDUHGBnRcYTjrm5OWNnwiElvBSC_pfdohE4LEyx93GYEFINFUzd9FLzqk0mhECrpSu1rKDGkRe6382jUMBwUg853Sydd_MlYXqZSxa-jeg76DSCO5X92e0sZ600lYOZ2jU1y4lz0MbMnk1wgvNzlYvUVslhNh_tHWd0uX9sjAdxxk4ERzU8gpq_3qNYK7MJN-hM"/>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex justify-between text-sm font-medium">
+<p class="text-saffron">Out for Delivery</p>
+<p class="text-soft-gray">Arriving Today, 12-1 PM</p>
+</div>
+<div class="w-full bg-soft-gray/20 rounded-full h-2">
+<div class="bg-saffron h-2 rounded-full" style="width: 66%;"></div>
+</div>
+</div>
+<div class="border-t border-soft-gray/20 pt-4 flex items-center justify-between">
+<div>
+<p class="text-charcoal dark:text-gray-300 text-base font-medium leading-normal">Today's Meal:</p>
+<p class="text-soft-gray text-sm font-normal leading-normal">Dal Makhani, Jeera Rice, 2 Rotis</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-saffron text-white text-sm font-bold leading-normal">
+<span class="truncate">Track Delivery</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Order Card 2: Preparing -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-lg bg-white dark:bg-gray-800 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex items-start justify-between gap-4">
+<div>
+<p class="text-charcoal dark:text-off-white text-lg font-bold leading-tight tracking-[-0.015em]">Monthly Dinner Plan</p>
+<p class="text-soft-gray text-sm font-normal leading-normal">Order Date: 22 Oct 2023</p>
+</div>
+<img class="size-16 rounded-md object-cover" data-alt="A fresh and healthy salad bowl with greens and vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAyCqyUhCHJpgJsNiSCsjUkyvAjQr0ZB9TP4IMD_kcOXsmofDtEygZj_wlIociunCzz_hWwQw3ZAFuDtuzxaOXy81cpJwND6Tkdh_j0hJIWCd9vgTX6ybQA24opdShFTKdDquCQOf7u9VdXX-2wQ0H2UK5wwXKCpUEMIk3f7jTd3lhHcwKLrPFtPmIakoBdUtj-Gsa5VW7Izt_aWWQCJBaN2qaRhU1b5U-BwznQqYTW-2r1bM_90hT85Mjs8YTjX6Wbg6pae5TXKM"/>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex justify-between text-sm font-medium">
+<p class="text-turmeric">Preparing</p>
+<p class="text-soft-gray">Arriving Today, 7-8 PM</p>
+</div>
+<div class="w-full bg-soft-gray/20 rounded-full h-2">
+<div class="bg-turmeric h-2 rounded-full" style="width: 33%;"></div>
+</div>
+</div>
+<div class="border-t border-soft-gray/20 pt-4 flex items-center justify-between">
+<div>
+<p class="text-charcoal dark:text-gray-300 text-base font-medium leading-normal">Today's Meal:</p>
+<p class="text-soft-gray text-sm font-normal leading-normal">Butter Chicken, Naan, Salad</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-charcoal text-white dark:bg-gray-700 dark:text-off-white text-sm font-bold leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Illustration Card -->
+<div class="flex flex-col items-center justify-center text-center rounded-lg bg-white/50 dark:bg-gray-800/50 p-8 my-8">
+<span class="material-symbols-outlined text-saffron text-6xl mb-4">
+                    receipt_long
+                </span>
+<h3 class="text-charcoal dark:text-off-white text-lg font-bold">No Past Orders Yet</h3>
+<p class="text-soft-gray mt-2 mb-4 max-w-xs">Looks like you haven't completed any orders. Your past orders will show up here.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-saffron text-white text-base font-bold leading-normal">
+<span class="truncate">Browse Meal Plans</span>
+</button>
+</div>
+</main>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const backIcon = Array.from(document.querySelectorAll('.material-symbols-outlined')).find(el => (el.textContent || '').includes('arrow_back'));
+    if (backIcon) {
+      backIcon.addEventListener('click', () => {
+        window.location.href = '../payment_&_checkout/code.html';
+      });
+    }
+
+    // Populate the first active order card with last successful order
+    try {
+      const order = JSON.parse(localStorage.getItem('lastOrder') || 'null');
+      if (order) {
+        const titleEls = Array.from(document.querySelectorAll('p.text-lg.font-bold'));
+        if (titleEls[0]) titleEls[0].textContent = `${order.selectedDays}-Day ${order.planName} Plan`;
+
+        const dateEls = Array.from(document.querySelectorAll('p.text-soft-gray.text-sm')).filter(p => (p.textContent || '').includes('Order Date'));
+        if (dateEls[0]) dateEls[0].textContent = `Order Date: ${order.orderDateText}`;
+
+        // Update delivery info to show period inline if available
+        const deliveryInfoEls = Array.from(document.querySelectorAll('div.flex.justify-between.text-sm.font-medium p.text-soft-gray'));
+        if (deliveryInfoEls[0] && order.period) {
+          deliveryInfoEls[0].textContent = `Active: ${order.period}`;
+        }
+
+        // One-time success banner
+        const justPaid = localStorage.getItem('justPaid') === '1';
+        if (justPaid) {
+          const main = document.querySelector('main');
+          if (main) {
+            const banner = document.createElement('div');
+            banner.className = 'flex items-center justify-between rounded-lg bg-mint/10 p-4 mb-2';
+            banner.innerHTML = `<p class="text-charcoal dark:text-off-white text-base font-bold">Order Confirmed</p><p class="text-soft-gray text-sm">#${order.orderId} • ₹${(order.amount||0).toFixed(2)}</p>`;
+            main.insertBefore(banner, main.firstChild);
+          }
+          localStorage.removeItem('justPaid');
+        }
+      }
+    } catch {}
+  });
+</script>
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ghar ka Khaana - Meal Preference</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec7f13",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221910",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .group:has(input:checked) .selection-indicator {
+      display: flex;
+    }
+    .group:has(input:checked) > div {
+       box-shadow: 0 0 0 2px #ec7f13;
+       transform: scale(1.02);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-stone-900 dark:text-stone-100">arrow_back</span>
+</div>
+<h2 class="text-stone-900 dark:text-stone-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Ghar ka Khaana</h2>
+<div class="size-12 shrink-0"></div>
+</div>
+<!-- Meta Text -->
+<p class="text-stone-500 dark:text-stone-400 text-sm font-normal leading-normal px-4 text-center">Step 1 of 3: Choose your meal plan</p>
+<!-- Headline Text -->
+<h1 class="text-stone-900 dark:text-stone-100 tracking-tight text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-4">What's your food preference?</h1>
+<div class="flex flex-col gap-4 p-4 flex-1">
+<!-- Veg Card -->
+<label class="group relative cursor-pointer">
+<input class="sr-only" name="preference" type="radio" value="veg"/>
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-stone-800 transition-all duration-200">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A beautiful shot of a vegetarian thali with multiple small bowls of curries, rice, and bread." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcbsM9wAnMw6QR42IBbtE-_HjN-SWzurNQzrloZlyKO5mRmWBFXhuITOUk97fNcIZnw6kPpY4l8ZDK4PY9RIg3mRD9fZk652bf7gcJ01QNfA9KTw_8OIzrrJfEwVrPnyba_aYSUCmO-fONPIq0fEsV4a8aioeerbdgMr3BgdkVROOE4P1Bh_N-n0xjl8CZfttUJcMKcz04Ul0Aftj3720ok_vxGX0C0F05W24WqvdQ0sE5e5fP2OA7aVzZYISltKL6sf2-zrALvQ6r");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<p class="text-stone-900 dark:text-stone-100 text-lg font-bold leading-tight tracking-[-0.015em]">Veg</p>
+<p class="text-stone-500 dark:text-stone-400 text-base font-normal leading-normal">Pure vegetarian meals, full of flavor.</p>
+</div>
+</div>
+<div class="selection-indicator absolute top-3 right-3 hidden size-7 items-center justify-center rounded-full bg-primary">
+<span class="material-symbols-outlined text-white text-lg">check</span>
+</div>
+</label>
+<!-- Non-Veg Card -->
+<label class="group relative cursor-pointer">
+<input class="sr-only" name="preference" type="radio" value="non-veg"/>
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-stone-800 transition-all duration-200">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="An appealing image of a non-vegetarian dish like chicken curry in a bowl." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2J7NDx4r-pr9cNqeBMiMZdqpYkna0-4xQ-IzD6MxMOR_31fE_dkjnKNlaSCGyatOFpDyEudYX2kyKOKwaTOd4by6zzDMRAZoUCXAKuNScN__xQ90uMxo0EIs_DA_ZNebldlkCYfT4sACyFeGIPdEqTQpzUiGyyqXVyIVrsiAC6aKi2yjgHDvsEDc_VMv4Lm5cEYd3SqB7YvLKOjPodiOhnszji6rq9EdMYiKCtPqZ1UCvMwhCHkhtQ9Vb65jCLp_mhqjBZDkyEvGN");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<p class="text-stone-900 dark:text-stone-100 text-lg font-bold leading-tight tracking-[-0.015em]">Non-Veg</p>
+<p class="text-stone-500 dark:text-stone-400 text-base font-normal leading-normal">Includes delicious chicken, mutton, or fish dishes.</p>
+</div>
+</div>
+<div class="selection-indicator absolute top-3 right-3 hidden size-7 items-center justify-center rounded-full bg-primary">
+<span class="material-symbols-outlined text-white text-lg">check</span>
+</div>
+</label>
+<!-- Mixed Card -->
+<label class="group relative cursor-pointer">
+<input class="sr-only" name="preference" type="radio" value="mixed"/>
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-stone-800 transition-all duration-200">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A meal that combines both veg and non-veg elements, possibly a buffet style." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYVgHtN9x6ygsbBVCPxrhr5e31UGfmLW_aCpngcOyvycZRLsbsACaeXnrRIyMK62Cu2rVZnR79LyFw2GIoMef-ZuQThlaIulIGUunQQglc9_5ZMwClrec-Ix8soE0RFwY12v2zALeMvqN4WHpSJc8xxf1NNcvIlc_Iv1M4NqdqKMATfrsdR2wzth6jvId-haz7GbLSZ46soFac6Ml-imZrtyBS_ihjIbwTXka-YLWVOOICVvPKkO0U81K9r6ew-AyDUVCW3Fic8Gu3");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<p class="text-stone-900 dark:text-stone-100 text-lg font-bold leading-tight tracking-[-0.015em]">Mixed</p>
+<p class="text-stone-500 dark:text-stone-400 text-base font-normal leading-normal">A flexible mix of veg and non-veg meals.</p>
+</div>
+</div>
+<div class="selection-indicator absolute top-3 right-3 hidden size-7 items-center justify-center rounded-full bg-primary">
+<span class="material-symbols-outlined text-white text-lg">check</span>
+</div>
+</label>
+</div>
+<!-- Action Button -->
+<div class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pt-2 w-full">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-4 bg-primary text-white text-base font-bold leading-normal shadow-lg shadow-primary/30 disabled:bg-stone-300 dark:disabled:bg-stone-600 disabled:shadow-none disabled:cursor-not-allowed">
+<span class="truncate">Continue</span>
+</button>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const findByText = (selector, text) => Array.from(document.querySelectorAll(selector)).find(el => (el.textContent || '').trim().includes(text));
+    const continueBtn = findByText('button', 'Continue');
+    if (continueBtn) {
+      continueBtn.addEventListener('click', () => {
+        window.location.href = '../subscription_duration_selection/code.html';
+      });
+    }
+
+    const backIcon = Array.from(document.querySelectorAll('.material-symbols-outlined')).find(el => (el.textContent || '').includes('arrow_back'));
+    if (backIcon) {
+      backIcon.addEventListener('click', () => {
+        window.location.href = '../meal_type_selection_1/code.html';
+      });
+    }
+  });
+</script>
+</body></html>
