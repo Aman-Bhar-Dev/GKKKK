@@ -33,18 +33,18 @@ jobs:
             platforms;android-34
             build-tools;34.0.0
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Disable Capacitor telemetry
-        run: npx cap telemetry off || true
+        run: npx --yes @capacitor/cli@latest cap telemetry off || true
 
-      - name: Sync web assets to Android
-        run: npx cap sync android
+      - name: Sync web assets to Android (pinned CLI)
+        run: npx --yes @capacitor/cli@latest cap sync android
+
+      - name: Ensure Gradle executable permissions
+        run: chmod +x android/gradlew
 
       - name: Build debug APK
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
